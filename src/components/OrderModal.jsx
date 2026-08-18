@@ -98,8 +98,7 @@ export default function OrderModal({ product, qty, total, t, lang, onClose }) {
 
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "12px 0", borderTop: "1px solid #f3f4f6", marginBottom: 14 }}>
             <span style={{ fontSize: 13, color: "#6b7280", fontWeight: 500 }}>{t.totalLbl}</span>
-            <span style={{ fontSize: 20, fontWeight: 800, color: "#16a34a" }}>{total.toLocaleString("en-Us")
-            } sum</span>;
+            <span style={{ fontSize: 20, fontWeight: 800, color: "#16a34a" }}>{total.toLocaleString("en-Us")} sum</span>;
           </div>
 
           <button onClick={submit} disabled={!valid}
@@ -119,7 +118,7 @@ export default function OrderModal({ product, qty, total, t, lang, onClose }) {
             <div style={{ width: 62, height: 62, background: "#dcfce7", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 30, margin: "0 auto 14px" }}>✅</div>
             <div style={{ fontSize: 19, fontWeight: 800, color: "#0f2e1a", marginBottom: 14 }}>{t.sucTitle}</div>
             <div style={{ background: "#f8fafc", border: "1px solid #e5e7eb", borderRadius: 13, padding: "13px 15px", textAlign: "left", marginBottom: 13 }}>
-              {[["🧾", orderId], ["📦", `${qty} × ${product.name} — $${total}`], ["📍", form.address], ["📞", form.phone1], form.phone2 && ["📞", form.phone2]].filter(Boolean).map(([icon, text], i) => (
+              {[["🧾", orderId], ["📦", `${qty} × ${product.name} — ${total.toLocaleString("en-US")} sum`], ["📍", form.address], ["📞", form.phone1], form.phone2 && ["📞", form.phone2]].filter(Boolean).map(([icon, text], i) => (
                 <div key={i} style={{ display: "flex", gap: 8, fontSize: 12, color: "#374151", marginBottom: 5 }}>
                   <span>{icon}</span><span>{text}</span>
                 </div>
