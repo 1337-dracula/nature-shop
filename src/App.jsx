@@ -4,7 +4,7 @@ import PhotoSwiper from "./components/PhotoSwiper";
 import OrderModal from "./components/OrderModal";
 import TelegramContactBtn from "./components/TelegramContactBtn";
 
-const TELEGRAM_USERNAME = "YourUsername"; // ← change this
+const TELEGRAM_USERNAME = "@mrstudent01"; // ← change this
 
 const PRODUCT = { name: "Detoxsioma", price: 1370000, stock: 48 };
 
