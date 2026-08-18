@@ -6,13 +6,11 @@ import TelegramContactBtn from "./components/TelegramContactBtn";
 
 const TELEGRAM_USERNAME = "YourUsername"; // ← change this
 
-const PRODUCT = { name: "Vitamin D3", price: 12, stock: 48 };
+const PRODUCT = { name: "Detoxsioma", price: 1370000, stock: 48 };
 
 const PHOTOS = [
-  { emoji: "☀️", bg: "linear-gradient(135deg,#ecfdf5,#d1fae5)" },
-  { emoji: "💊", bg: "linear-gradient(135deg,#fefce8,#fef08a)" },
-  { emoji: "📋", bg: "linear-gradient(135deg,#f0f9ff,#bae6fd)" },
-  { emoji: "📦", bg: "linear-gradient(135deg,#fdf4ff,#f5d0fe)" },
+  { src: "/photos/detox.jpg", bg: "#ecfdf5" },
+  { src: "/photos/detoxbox.jpg", bg: "#fdf4ff" },
 ];
 
 export default function App() {
@@ -70,7 +68,7 @@ export default function App() {
         <p style={{ fontSize: 13, color: "#6b7280", lineHeight: 1.6, paddingTop: 14, borderTop: "1px solid #f3f4f6", marginBottom: 16 }}>{t.desc}</p>
 
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14 }}>
-          <span style={{ fontSize: 28, fontWeight: 800, color: "#16a34a", letterSpacing: "-0.5px" }}>${total}</span>
+          <span style={{ fontSize: 28, fontWeight: 800, color: "#16a34a", letterSpacing: "-0.5px" }}>{total.toLocaleString("en-Us")} sum</span>
           <span style={{ fontSize: 12, fontWeight: 600, color: "#6b7280", background: "#f3f4f6", padding: "5px 12px", borderRadius: 20 }}>{t.cashPill}</span>
         </div>
 
