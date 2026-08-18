@@ -98,7 +98,8 @@ export default function OrderModal({ product, qty, total, t, lang, onClose }) {
 
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "12px 0", borderTop: "1px solid #f3f4f6", marginBottom: 14 }}>
             <span style={{ fontSize: 13, color: "#6b7280", fontWeight: 500 }}>{t.totalLbl}</span>
-            <span style={{ fontSize: 20, fontWeight: 800, color: "#16a34a" }}>${total}</span>
+            <span style={{ fontSize: 20, fontWeight: 800, color: "#16a34a" }}>{total.toLocaleString("en-Us")
+            } sum</span>;
           </div>
 
           <button onClick={submit} disabled={!valid}
